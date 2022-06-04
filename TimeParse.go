@@ -16,7 +16,8 @@ func main() {
 	if err != nil {
 		log.Fatal("Error in parsing time:", err)
 	}
-
+	timeunix := time.Now()
+	fmt.Println("Right now :", timeunix)
 	fmt.Println("Time before parsing: ", Realtime)
 	fmt.Println("----------------------")
 	fmt.Println("Time after parsing: ", t)
