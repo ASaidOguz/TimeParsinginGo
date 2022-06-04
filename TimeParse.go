@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
-	Realtime := "Thu, 05/19/11, 10:47"
+	Realtime := "Thu, 05/19/11, 10:47PM"
 
-	timeTemplate := "Mon, 01/02/06, 03:04"
+	timeTemplate := "Mon, 01/02/06, 03:04PM"
 
 	t, err := time.Parse(timeTemplate, Realtime)
 
