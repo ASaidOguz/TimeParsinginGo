@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"time"
 )
 
@@ -10,7 +11,11 @@ func main() {
 
 	timeTemplate := "Mon, 01/02/06, 03:04"
 
-	t, _ := time.Parse(timeTemplate, Realtime)
+	t, err := time.Parse(timeTemplate, Realtime)
+
+	if err != nil {
+		log.Fatal("Error in parsing time:", err)
+	}
 
 	fmt.Println("Time before parsing: ", Realtime)
 	fmt.Println("----------------------")
